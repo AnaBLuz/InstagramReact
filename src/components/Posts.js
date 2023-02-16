@@ -1,23 +1,44 @@
 import Post from "./Post"
 
+const posts =[
+    {   
+        usuario : "meowed",
+        usuarioImg : "assets/img/meowed.svg",
+        likenome : "respondeai",
+        postimg : "assets/img/gato-telefone.svg",
+        likeimg : "assets/img/respondeai.svg",
+        Likequant: 101523,   
+    },
+    {   
+        usuario : "barked",
+        usuarioImg : "assets/img/barked.svg",
+        likenome : "adorable_animals",
+        postimg : "assets/img/dog.svg",
+        likeimg : "assets/img/adorable_animals.svg",
+        Likequant: 101523,   
+    },
+    {   
+        usuario : "meowed2",
+        usuarioImg : "assets/img/meowed.svg",
+        likenome : "respondeai",
+        postimg : "assets/img/gato-telefone.svg",
+        likeimg : "assets/img/respondeai.svg",
+        Likequant: 551523,   
+    },
+]
+
 export default function Posts(){
-    return(
-        <div class="posts">
-          <Post imgUsuario="assets/img/meowed.svg" usuario="meowed" 
-          imgConteudo="assets/img/gato-telefone.svg" altConteudo="gato-telefone" 
-          curtidasImg="assets/img/respondeai.svg" curtidasAlt="respondeai"
-          curtidasNome="respondeai" curtidasQuantidade="outras 101.523 pessoas" />
-
-          <Post imgUsuario="assets/img/barked.svg" usuario="barked" 
-          imgConteudo="assets/img/dog.svg" altConteudo="dog" 
-          curtidasImg="assets/img/adorable_animals.svg" curtidasAlt="adorable_animals" 
-          curtidasNome="adorable_animals" curtidasQuantidade="outras 99.159 pessoas" />
-
-          <Post imgUsuario="assets/img/barked.svg" usuario="barked" 
-          imgConteudo="assets/img/dog.svg" altConteudo="dog" 
-          curtidasImg="assets/img/adorable_animals.svg" curtidasAlt="adorable_animals" 
-          curtidasNome="adorable_animals" curtidasQuantidade="outras 99.159 pessoas" />
-          
-        </div>
-    )
+    return(<div className="posts">
+        {posts.map((prop) =>(
+            <Post   key={prop.usuario}
+                    usuario={prop.usuario}
+                    usuarioImg={prop.usuarioImg}
+                    postimg={prop.postimg}
+                    likenome={prop.likenome}
+                    likeimg={prop.likeimg}
+                    Likequant={prop.Likequant}  
+            />
+        ))}
+  </div>
+)
 }

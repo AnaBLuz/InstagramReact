@@ -4,7 +4,8 @@ import Sugestoes from "./Sugestoes"
 export default function SideBar(){
     return(
     <>
-      <Usuario /> 
+      <Usuario usuarioimg = "assets/img/catanacomics.svg"
+              usuarionome = "catanacomics" /> 
       <Sugestoes />
       
       <div class="links">
